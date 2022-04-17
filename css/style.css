@@ -1,0 +1,372 @@
+@charset "UTF-8";
+/* 空間位置&&變形 */
+/* static default:left */
+.img1 {
+  position: static; }
+
+/* relative default:left to static */
+.img2 {
+  position: relative;
+  right: 40px; }
+  @media (min-width: 992px) {
+    .img2 {
+      top: 40px; } }
+
+/* absolute default:left */
+.img3 {
+  position: absolute;
+  left: 60px;
+  top: 70px; }
+  @media (min-width: 992px) {
+    .img3 {
+      top: 90px; } }
+  @media (min-width: 768px) {
+    .img3 {
+      left: 160px;
+      top: 90px; } }
+
+/* fixed default:center */
+.img4 {
+  position: fixed;
+  right: 100px;
+  transform: rotate(10deg) skew(20deg, 0); }
+
+.margin-B-100 {
+  margin-bottom: 100px; }
+
+/* ---pseudo&&轉場--- */
+a::before {
+  background-color: aqua;
+  content: '這是一個'; }
+
+a::after {
+  background-color: aquamarine;
+  content: '!!'; }
+
+a:link {
+  background-color: yellow;
+  color: black; }
+
+a:visited {
+  color: green; }
+
+a:hover {
+  background-color: pink;
+  color: white;
+  transition: background-color 3s 0s,color 2s 1s;
+  /* 轉場:前面是效果總時間,後面是延遲時間 */ }
+
+a:active {
+  color: blue; }
+
+/* 選擇器＆＆顏色 */
+/* 標籤 */
+h2 {
+  color: rgba(0, 128, 0, 0.9);
+  /* rgba表示 */ }
+
+/* class */
+.class {
+  color: #ffc0cb;
+  /* 16禁制表示 */ }
+
+/* id */
+#id {
+  color: red;
+  /* 顏色英文表示 */ }
+
+/* 文字設定 */
+/* font-face */
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
+  src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf"); }
+
+body {
+  font-family: "Bitstream Vera Serif Bold", serif; }
+
+.p1 {
+  font-family: Arial, Helvetica, sans-serif; }
+
+.p2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.p3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300; }
+
+.p4 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 8;
+  text-decoration: underline;
+  text-shadow: 1px 1px 2px pink; }
+
+/* 定位 */
+p {
+  line-height: 4; }
+
+/* block */
+.d1 {
+  display: block;
+  background-color: red; }
+
+/* inline-block */
+.d2 {
+  display: inline-block;
+  background-color: red; }
+
+/* inline */
+.d3 {
+  display: inline;
+  background-color: red; }
+
+/* 空間位置&&變形 */
+/* Flexbox----------------------------------------------------------- */
+/* Default----------------------------- */
+.margin-B-20 {
+  margin-bottom: 20px; }
+
+.margin-X-20 {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.round {
+  border-radius: 10px; }
+
+.bg-yellow {
+  background-color: #edff89; }
+
+.bg-pink {
+  background-color: #f7a4ff; }
+
+.bg-green {
+  background-color: #b6ff2f; }
+
+.bg-blue {
+  background-color: #53d2e9; }
+
+.line {
+  line-height: 4; }
+
+.border {
+  border-width: 10px; }
+
+/* Default----------------------------- */
+/* Flex----------------------------- */
+.flex {
+  display: flex; }
+
+.flex-row {
+  flex-direction: row;
+  /* 橫排 */ }
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+  /* 橫排--從右邊數來 */ }
+
+.flex-col {
+  flex-direction: column;
+  /* 直排 */ }
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+  /* 直排--從右邊數來 */ }
+
+.flex-wrap {
+  flex-wrap: wrap;
+  /* flex可以換行 */ }
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+  /* flex不可以換行 */ }
+
+.flex-0 {
+  flex: 0 0 0%;
+  /*  */ }
+
+.flex-none {
+  flex: 0 0 auto;
+  /*  */ }
+
+.flex-initial {
+  flex: 0 1 auto;
+  /* */ }
+
+.flex-1 {
+  flex: 1 1 0%;
+  /*  */ }
+
+.flex-auto {
+  flex: 1 1 auto;
+  /*  */ }
+
+/* Flex----------------------------- */
+.order-first {
+  order: 1;
+  /* 橫排--從右邊數來 */ }
+
+.order-last {
+  order: 3;
+  /* 橫排--從右邊數來 */ }
+
+/* Grid----------------------------- */
+.grid {
+  display: grid; }
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* 每行3個 */ }
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+  /* 行的此區塊為2個 */ }
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  /* 每列3個 */ }
+
+.row-span-2 {
+  grid-row: span 3 / span 3;
+  /* 列的此區塊為2個 */ }
+
+.col-start {
+  grid-column-start: 2;
+  /*  */ }
+
+.col-end {
+  grid-column-end: 3;
+  /*  */ }
+
+.row-start {
+  grid-row-start: 2;
+  /*  */ }
+
+.row-end {
+  grid-row-end: 3;
+  /*  */ }
+
+.grid-flow-row {
+  grid-auto-flow: row;
+  /* 從每行開始排列 */ }
+
+.grid-flow-col {
+  grid-auto-flow: column;
+  /* 從每列開始排列 */ }
+
+.grid-flow-row-dense {
+  grid-auto-flow: row dense;
+  /* 行有空位補上 */ }
+
+.grid-flow-col-dense {
+  grid-auto-flow: column dense;
+  /* 列有空位補上 */ }
+
+.gap {
+  gap: 0.5rem;
+  /* 間隔 */ }
+
+.col-gap {
+  column-gap: 1rem;
+  /* Ｘ間隔 */ }
+
+.row-gap {
+  row-gap: 1rem;
+  /* Ｙ間隔 */ }
+
+/* Grid----------------------------- */
+/* Placement----------------------------- */
+.h-15 {
+  height: 15rem;
+  /* 240px */ }
+
+.h-30 {
+  height: 30rem;
+  /* 480px */ }
+
+.h-45 {
+  height: 45rem;
+  /* 720px */ }
+
+.h-60 {
+  height: 60rem;
+  /* 960px */ }
+
+.text-center {
+  text-align: center; }
+
+.justify-start {
+  justify-content: flex-start;
+  /* flex靠左對齊 */ }
+
+.justify-end {
+  justify-content: flex-end;
+  /* flex靠右對齊 */ }
+
+.justify-center {
+  justify-content: center;
+  /* flex置中對齊 */ }
+
+.justify-items-start {
+  justify-items: start;
+  /* grid靠左對齊 */ }
+
+.justify-items-end {
+  justify-items: end;
+  /* grid靠右對齊 */ }
+
+.justify-items-center {
+  justify-items: center;
+  /* grid置中對齊 */ }
+
+.justify-self-start {
+  justify-self: start;
+  /* grid水平其中一個置中對齊 */ }
+
+.justify-self-end {
+  justify-self: end;
+  /* grid水平其中一個置中對齊 */ }
+
+.justify-self-center {
+  justify-self: center;
+  /* grid水平其中一個置中對齊 */ }
+
+.content-start {
+  align-content: flex-start;
+  /* grid向上對齊 */ }
+
+.content-end {
+  align-content: flex-end;
+  /* grid向下對齊 */ }
+
+.content-center {
+  align-content: center;
+  /* grid置中對齊 */ }
+
+.items-start {
+  align-items: flex-start;
+  /* flex向上對齊 */ }
+
+.items-end {
+  align-items: flex-end;
+  /* flex單行向下對齊 */ }
+
+.items-center {
+  align-items: center;
+  /* flex單行置中對齊 */ }
+
+.self-start {
+  align-self: flex-start;
+  /* flex垂直其中一個向上對齊 */ }
+
+.self-end {
+  align-self: flex-end;
+  /* flex垂直其中一個向下對齊 */ }
+
+.self-center {
+  align-self: center;
+  /* flex垂直其中一個置中對齊 */ }
+
+/* Placement----------------------------- */

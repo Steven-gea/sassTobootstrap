@@ -1,0 +1,6 @@
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == moblie{
+       @media (min-width:640px) {@content };  //>640px
+    }
+  }

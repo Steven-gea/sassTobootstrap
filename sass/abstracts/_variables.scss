@@ -1,0 +1,54 @@
+$color-16: #ffc0cb;
+$color-rgba: rgba(0,128,0,0.9);
+$color-text: red;
+
+$color-bg-link: yellow;
+$color-link: black;
+$color-visit: green;
+$color-bg-hover: pink;
+$color-hover: white;
+$color-active: blue;
+
+$location-color:red;
+
+$position-length: 20px;
+$position-length-half: $position-length*0.5;
+$position-length2: $position-length*2;
+$position-length3: $position-length*3;
+$position-length4: $position-length*4;
+$position-length5: $position-length*5;
+$position-length8: $position-length*8;
+$position-length10: $position-length*10;
+
+$default-font-size: 1.2rem;
+$big-font-size: $default-font-size*2;
+
+$default-length:1px;
+$default-length10:$default-length*10;
+$default-length20:$default-length*20;
+$default-length40:$default-length*40;
+$default-length100:$default-length*100;
+
+$flex-length:1rem;
+$flex-length-half:$flex-length*0.5;
+$flex-length15:$flex-length*15;
+$flex-length30:$flex-length*30;
+$flex-length45:$flex-length*45;
+$flex-length60:$flex-length*60;
+
+$flex-yellow-color:rgb(237, 255, 137);
+$flex-pink-color:rgb(247, 164, 255);
+$flex-green-color:rgb(182, 255, 47);
+$flex-blue-color:rgb(83, 210, 233);
+
+
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
